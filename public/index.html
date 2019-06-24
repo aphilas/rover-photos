@@ -10,9 +10,24 @@
   <h1>Rover Photos</h1>
 
 
-  <form action="" method="get" id="photos-form">
+  <form action="http://localhost:5000/api" method="get" id="photos-form">
+    <label for="sol-input">Sol:</label>
+    <input type="number" name="sol" id="sol-input" value="1000">
 
+    <label for="camera-select">Camera:</label>
+    <select name="camera" id="camera-select">
+      <option value="fhaz">FHAZ</option>
+      <option value="rhaz">RHAZ</option>
+      <option value="mast">MAST</option>
+      <option value="chemcam">CHEMCAM</option>
+      <option value="mahli">MAHLI</option>
+      <option value="mardi">MARDI</option>
+      <option value="navcam">NAVCAM</option>
+    </select>
+
+    <input type="submit" value="Find Photos">
   </form>
 
+  <script src="js/main.js"></script>
 </body>
 </html>
