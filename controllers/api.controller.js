@@ -1,8 +1,8 @@
 import { getPhotoLinks } from './getPhotoLinks'
 
 const apiController = async (req, res) => {
-  const sol = req.body.sol || 0
-  const camera = req.body.camera || 'navcam'
+  const sol = req.query.sol || 0
+  const camera = req.query.camera || 'navcam'
 
   const links = await getPhotoLinks(sol, camera).catch(err => console.log(err))
 
