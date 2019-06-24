@@ -22,7 +22,8 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "esm": "^3.2.25",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0"
   },
   "nodemonConfig": {
     "verbose": false,
