@@ -1,4 +1,16 @@
-const apiController = (req, res) => {
+import { getPhotoLinks } from './getPhotoLinks'
+
+const apiController = async (req, res) => {
+  const sol = req.body.sol || 0
+  const camera = req.body.camera || 'navcam'
+
+  const links = await getPhotoLinks(sol, camera).catch(err => console.log(err))
+
+  res.send(links)
+}
+
+export { apiController }
+
   /* 
     request params:
 
@@ -6,11 +18,3 @@ const apiController = (req, res) => {
     camera - FHAZ, RHAZ, MAST, CHEMCAM, MAHLI, MARDI, NAVCAM, [PANCAM, MINITES]
 
   */
-
-  const sol = req.body.sol || 0
-  const camera = req.body.camera || 'navcam'
-
-  res.send(`You have requested for photos from camera ${ camera } and sol ${ sol }`)
-}
-
-export { apiController }
