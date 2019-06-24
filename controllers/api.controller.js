@@ -6,7 +6,7 @@ const apiController = async (req, res) => {
 
   const links = await getPhotoLinks(sol, camera).catch(err => console.log(err))
 
-  res.send(links)
+  res.send(JSON.stringify(links))
 }
 
 export { apiController }
