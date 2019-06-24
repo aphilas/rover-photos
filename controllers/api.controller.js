@@ -7,8 +7,8 @@ const apiController = (req, res) => {
 
   */
 
-  const sol = req.params.sol || 0
-  const camera = req.params.camera || 'navcam'
+  const sol = req.body.sol || 0
+  const camera = req.body.camera || 'navcam'
 
   res.send(`You have requested for photos from camera ${ camera } and sol ${ sol }`)
 }
