@@ -54,7 +54,7 @@ body {
   line-height: 1.5rem;
 }
 
-#sol-label{
+.tooltip{
   border-bottom: 1px dotted #000;
   cursor: help;
 }
@@ -127,4 +127,22 @@ body {
   padding: .5rem;
 }
 
+@media only screen and (max-width: 600px) {
+  #photos-form{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #camera-select{
+    margin-bottom: 1rem;
+  }
+
+  #sol-label{
+    margin-bottom: .25rem;
+  }
+
+  #images {
+    width: 100%;
+  }
+}
 
