@@ -3,7 +3,10 @@ const formEl = document.getElementById('photos-form')
 // section for all images
 const imagesEl = document.getElementById('images')
 
-const endpoint = 'http://localhost:5000/api'
+// local developement
+// const endpoint = 'http://localhost:5000/api'
+
+const endpoint = 'https://rover-photos.herokuapp.com/api'
 
 // add message to imagesEl element - for loading/error/result messages
 const addMessage = text => {
