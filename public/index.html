@@ -5,30 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Rover Photos</title>
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
 </head>
 <body>
-  <h1>Rover Photos</h1>
+  
+  <main class="main">
+    <h1 class="heading">Mars Curiosity Rover Photos</h1>
+    <p class="description">Search for the Curiosity Rover photos</p>
 
+    <form id="photos-form">
+      <label for="sol-input" id="sol-label" title="Martian day on which they were taken, counting up from the rover's landing date">Sol:</label>
+      <input type="number" name="sol" id="sol-input" value="1000">
+  
+      <label for="camera-select">Camera:</label>
+      <select name="camera" id="camera-select">
+        <option value="fhaz">FHAZ</option>
+        <option value="rhaz">RHAZ</option>
+        <option value="mast">MAST</option>
+        <option value="chemcam">CHEMCAM</option>
+        <option value="mahli">MAHLI</option>
+        <option value="mardi">MARDI</option>
+        <option value="navcam">NAVCAM</option>
+      </select>
+  
+      <input type="submit" id="submit-input" value="Find Photos">
+    </form>
+  
+    <section id="images"></section>
+  </main>
 
-  <form action="http://localhost:5000/api" method="get" id="photos-form">
-    <label for="sol-input">Sol:</label>
-    <input type="number" name="sol" id="sol-input" value="1000">
-
-    <label for="camera-select">Camera:</label>
-    <select name="camera" id="camera-select">
-      <option value="fhaz">FHAZ</option>
-      <option value="rhaz">RHAZ</option>
-      <option value="mast">MAST</option>
-      <option value="chemcam">CHEMCAM</option>
-      <option value="mahli">MAHLI</option>
-      <option value="mardi">MARDI</option>
-      <option value="navcam">NAVCAM</option>
-    </select>
-
-    <input type="submit" value="Find Photos">
-  </form>
-
-  <section id="images"></section>
+  <footer class="footer">Made by <a href="https://www.nevilleomangi.me" target="_blank">Neville Omangi</a>, for <a href="https://chingu.io/" target="_blank">Chingu</a> </footer>
 
   <script src="js/main.js"></script>
 </body>
