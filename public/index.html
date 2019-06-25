@@ -13,14 +13,15 @@
   
   <main class="main">
     <h1 class="heading">Mars Curiosity Rover Photos</h1>
-    <p class="description">Search for the Curiosity Rover photos</p>
+    <p class="description">Search for Curiosity Rover photos</p>
 
     <form id="photos-form">
       <label for="sol-input" id="sol-label" title="Martian day on which they were taken, counting up from the rover's landing date">Sol:</label>
-      <input type="number" name="sol" id="sol-input" value="1000">
+      <input type="number" name="sol" id="sol-input" value="" required>
   
       <label for="camera-select">Camera:</label>
-      <select name="camera" id="camera-select">
+      <select name="camera" id="camera-select" required>
+        <option value="" selected="true" disabled>--Camera--</option>
         <option value="fhaz">FHAZ</option>
         <option value="rhaz">RHAZ</option>
         <option value="mast">MAST</option>
